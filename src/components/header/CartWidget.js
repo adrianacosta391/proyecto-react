@@ -1,6 +1,6 @@
 import React from "react"
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import '../components/NavBar.css'
+import './NavBar.css'
 
 const CartWidget = ({cantidad}) => {
     return (
