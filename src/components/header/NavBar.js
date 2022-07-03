@@ -6,7 +6,7 @@ import CartWidget from "./CartWidget"
 const Navbar = () => {
     return (
         <header>
-            <img src={logo} alt="logo" />
+            <img className="logo" src={logo} alt="logo" />
             <h1>CODERBURGER!✔</h1>
             <nav>
                 <a className="itemnav" href="'#'">MENU</a>

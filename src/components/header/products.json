@@ -1,0 +1,41 @@
+[
+    {
+        "id": "0",
+        "title":"BIG CODER",
+        "description": "La mas clasica de coder",
+        "price":"$360",
+        "pictureUrl":"https://i.imgur.com/fPuie8C.jpg"
+    }
+    ,
+    {
+        "id": "1",
+        "title":"CODER BACON",
+        "description": "Para amantes de la panceta",
+        "price":"$380",
+        "pictureUrl": "https://i.imgur.com/veZ8Q1e.jpg"
+    }
+    ,
+    {
+        "id": "2",
+        "title":"CODER CHEDDAR",
+        "description": "Vive el queso",
+        "price":"$420",
+        "pictureUrl": "https://i.imgur.com/6M11ShH.jpg"
+    }
+    ,
+    {
+        "id": "3",
+        "title":"DOBLE REACT",
+        "description": "Una bomba",
+        "price":"$390",
+        "pictureUrl": "https://i.imgur.com/Wqb1Era.jpg"
+    }
+    ,
+    {
+        "id": "4",
+        "title":"SINOVAC",
+        "description": "Una vacuna de sabores",
+        "price":"$460",
+        "pictureUrl": "https://i.imgur.com/V74NBg4.jpg"
+    }
+]

@@ -36,3 +36,80 @@
     transform: rotate(360deg);
   }
 }
+
+
+.itemCont {
+  background-color: rgb(39, 38, 38);
+  size: 35%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+  height: 350px;
+  width: 230px;
+  border: 2px solid rgb(255, 166, 0);
+  cursor: pointer;
+  
+}
+.itemsCont {
+  display: flex;
+  justify-content: center;
+  margin-top: 6%;
+  justify-content: space-between;
+  text-align: center;
+  align-self: center;
+}
+
+
+.itemCont:hover {
+  background-color: rgb(88, 23, 173);
+  animation: myAnim 2s ease 0s 1 normal forwards;
+  
+  }
+
+  @keyframes myAnim {
+    0%,
+    100% {
+      transform: translateX(0%);
+      transform-origin: 50% 50%;
+    }
+  
+    15% {
+      transform: translateX(-30px) rotate(-6deg);
+    }
+  
+    30% {
+      transform: translateX(15px) rotate(6deg);
+    }
+  
+    45% {
+      transform: translateX(-15px) rotate(-3.6deg);
+    }
+  
+    60% {
+      transform: translateX(9px) rotate(2.4deg);
+    }
+  
+    75% {
+      transform: translateX(-6px) rotate(-1.2deg);
+    }
+  }
+
+.itemPicture {
+  max-width: 150px;
+  max-height: 150px;
+  align-items: center;
+
+}
+
+.itemTitle{
+  color: rgb(255, 166, 0);
+}
+
+.itemDesc{
+  color: azure;
+}
+
+.itemPrice{
+  color: rgb(255, 166, 0);
+}
