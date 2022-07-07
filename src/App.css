@@ -113,3 +113,65 @@
 .itemPrice{
   color: rgb(255, 166, 0);
 }
+
+.itemContDesc{
+  display: flex;
+  background-color: rgb(39, 38, 38);
+  size: 60%;
+  align-items: flex-start;
+  text-align: center;
+  align-content: space-around;
+  margin: auto;
+  height: 62vh;
+  width: 100vh;
+  border: 2px solid rgb(255, 166, 0);
+  flex-direction:column;
+  
+}
+
+.itemTitleDesc{
+  color: rgb(255, 166, 0);
+  font-size: 6vh;
+  margin-left: 33vh;
+
+}
+
+.itemPictureDesc {
+  max-width: 35vh;
+  max-height: 35vh;
+  align-items:flex-start;
+  margin-left: 5vh;
+  border: 2px solid rgb(255, 166, 0); ;
+
+}
+
+.textDos{
+  color: rgb(255, 166, 0);
+  text-align: center;
+
+}
+
+.itemPriceDesc{
+  color: rgb(255, 166, 0);
+  margin-left: 13vh;
+  display: block;
+}
+
+.itemDescDesc{
+  color: azure;
+  margin-left: 10vh;
+  font-weight: bold;
+  font-size: 3vh;
+
+
+}
+
+.flexCont{
+  display: flex;
+}
+
+.flexContDos{
+  display: flex;
+  margin-left: 60vh;
+  margin-bottom: 20vh;
+}

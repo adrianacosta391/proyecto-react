@@ -84,7 +84,7 @@ h1{
 .purchase{
     display: flex;
     margin: auto;
-    justify-content: center;
+    align-items: center;
 }
 
 .btn {
