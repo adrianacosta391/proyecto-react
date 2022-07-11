@@ -9,11 +9,12 @@ const ItemList = ({items}) => {
         <>
         {items.map((item) => {
             return <Item 
-            key={item.id} 
+            key={item.id}
+            id={item.id}
             title={item.title} 
             pictureUrl={item.pictureUrl} 
             price={item.price} 
-            description={item.description}  />
+            description={item.description}/>
 
     
         })}
