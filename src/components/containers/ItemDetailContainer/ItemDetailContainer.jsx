@@ -22,14 +22,14 @@ const ItemDetailContainer = ({greeting}) =>{
 
     useEffect(() => {
         promise.then((data) =>{
-        const getData = data[itemId]
+        const getData = data.find(product => product.id === itemId)
         setProducts(getData)
         setloading(false)
         }).catch(() =>{
             console.log('todo mal')
         })
     }, [itemId]);
-console.log(products)
+
     return (
         <>
             <h2 className="textDos">{greeting}</h2>

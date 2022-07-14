@@ -1,11 +1,19 @@
-import React from "react"
+import React, { useState } from "react"
 import ItemCount from "../../header/ItemCount";
+import {Link} from "react-router-dom"
 
 const ItemDetail = ({item}) =>{
 
-    const onAdd = () => {
-        alert('Gracias, por tu compra')
+    const onAdd = (data) => {
+        setBuy(true)
+        setBuyCount(data)
       }
+
+      const [buy, setBuy] = useState(false)
+      const [buyCount, setBuyCount] = useState()
+
+
+
 return (
   
 <>
@@ -16,7 +24,8 @@ return (
         <span className="itemPriceDesc">{item.price}</span>
       </p>
     </div>
-    <div className="flexContDos"><ItemCount stock={5} onAdd={onAdd}/></div>
+    
+    <div className="flexContDos">{buy ? <Link to="/cart" className='btn'>FINALIZAR COMPRA</Link> : <ItemCount stock={5} onAdd={onAdd} buy={buyCount}/> }</div>
 </div>
 </>
 )
