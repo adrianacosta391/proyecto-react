@@ -88,6 +88,15 @@ h1{
   background-color: rgb(255, 166, 0);
   border-radius: 25%;
   text-align: center;
+  text-decoration: none;
+}
+
+.text-cart{
+
+text-decoration: none;
+color: rgb(88, 23, 173);
+font-weight: bold;
+
 }
 
 .add-sub{

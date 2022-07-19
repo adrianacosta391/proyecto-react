@@ -1,16 +1,21 @@
-import React, { useState } from "react"
+import React, { useState, useContext } from "react"
 import ItemCount from "../../header/ItemCount";
 import {Link} from "react-router-dom"
+import { cartContext } from "../../context/CartContext";
 
 const ItemDetail = ({item}) =>{
-
-    const onAdd = (data) => {
+  const {addProducts} = useContext(cartContext);
+  const [buy, setBuy] = useState(false)
+    
+  
+  const onAdd = (count) => {
         setBuy(true)
-        setBuyCount(data)
+        addProducts({...item, qty:count});
+        
       }
 
-      const [buy, setBuy] = useState(false)
-      const [buyCount, setBuyCount] = useState()
+      
+      
 
 
 
@@ -25,7 +30,7 @@ return (
       </p>
     </div>
     
-    <div className="flexContDos">{buy ? <Link to="/cart" className='btn'>FINALIZAR COMPRA</Link> : <ItemCount stock={5} onAdd={onAdd} buy={buyCount}/> }</div>
+    <div className="flexContDos">{buy ? <Link to="/cart" className='btn'>FINALIZAR COMPRA</Link> : <ItemCount stock={5} onAdd={onAdd}/> }</div>
 </div>
 </>
 )

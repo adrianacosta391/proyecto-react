@@ -4,6 +4,7 @@ import ItemDetailContainer from './components/containers/ItemDetailContainer/Ite
 import ItemListContainer from './components/containers/ItemListContainer/ItemListContainer';
 import Navbar from './components/header/NavBar'
 import Cart from './components/header/Cart';
+import CartContext from './components/context/CartContext';
 import {
   BrowserRouter,
   Routes,
@@ -13,13 +14,15 @@ import {
 const App = () => {
   return (
     <BrowserRouter>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<ItemListContainer greeting='Bienvenido a CB'/>} />
-        <Route path="/category/:categoryName" element={<ItemListContainer greeting='Bienvenido a CB'/>} />
-        <Route path="/item/:itemId" element={<ItemDetailContainer greeting='Detalles del producto'/>} />
-        <Route path="/cart" element={<Cart />} />
-      </Routes>
+      <CartContext>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<ItemListContainer greeting='Bienvenido a CB'/>} />
+            <Route path="/category/:categoryName" element={<ItemListContainer greeting='Bienvenido a CB'/>} />
+            <Route path="/item/:itemId" element={<ItemDetailContainer greeting='Detalles del producto'/>} />
+            <Route path="/cart" element={<Cart />} />
+          </Routes>
+      </CartContext>
     </BrowserRouter>
   );
 }
