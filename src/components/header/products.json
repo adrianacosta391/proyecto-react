@@ -3,7 +3,7 @@
         "id": "0",
         "title":"BIG CODER",
         "description": "La mas clasica de coder",
-        "price":"$360",
+        "price":360,
         "pictureUrl":"https://i.imgur.com/fPuie8C.jpg",
         "category":"burgers"
     }
@@ -12,7 +12,7 @@
         "id": "1",
         "title":"CODER BACON",
         "description": "Para amantes de la panceta",
-        "price":"$380",
+        "price":380,
         "pictureUrl": "https://i.imgur.com/veZ8Q1e.jpg",
         "category":"burgers"
     }
@@ -21,7 +21,7 @@
         "id": "2",
         "title":"CODER CHEDDAR",
         "description": "Vive el queso",
-        "price":"$420",
+        "price":420,
         "pictureUrl": "https://i.imgur.com/6M11ShH.jpg",
         "category":"burgers"
     }
@@ -30,7 +30,7 @@
         "id": "3",
         "title":"DOBLE REACT",
         "description": "Una bomba",
-        "price":"$390",
+        "price":390,
         "pictureUrl": "https://i.imgur.com/Wqb1Era.jpg",
         "category":"burgers"
     }
@@ -39,7 +39,7 @@
         "id": "4",
         "title":"SINOVAC",
         "description": "Una vacuna de sabores",
-        "price":"$460",
+        "price":460,
         "pictureUrl": "https://i.imgur.com/V74NBg4.jpg",
         "category":"burgers"
     }
@@ -48,7 +48,7 @@
         "id": "5",
         "title":"REFRESCO",
         "description": "Coca-cola de 1 litro",
-        "price":"$120",
+        "price":120,
         "pictureUrl": "https://i.imgur.com/vJtXhTW.jpg",
         "category":"bebidas"
     }
@@ -57,7 +57,7 @@
         "id": "6",
         "title":"CERVEZA",
         "description": "Patricia de 1 litro",
-        "price":"$160",
+        "price":160,
         "pictureUrl": "https://i.imgur.com/BZs27Ap.jpg",
         "category":"bebidas"
     }
@@ -66,7 +66,7 @@
         "id": "7",
         "title":"CHAJA",
         "description": "Postre chaja de durazno",
-        "price":"$140",
+        "price":140,
         "pictureUrl": "https://i.imgur.com/uov4ANZ.jpg",
         "category":"postres"
     }
@@ -75,7 +75,7 @@
         "id": "8",
         "title":"MASSINI",
         "description": "Postre Massini clasico",
-        "price":"$110",
+        "price":110,
         "pictureUrl": "https://i.imgur.com/Go1miiM.jpg",
         "category":"postres"
     }

@@ -26,7 +26,7 @@ return (
     <h2 className="itemTitleDesc">{item.title}</h2>
     <div className="flexCont"><img src={item.pictureUrl} alt="" className="itemPictureDesc" />
       <p className="itemDescDesc">{item.description}
-        <span className="itemPriceDesc">{item.price}</span>
+        <span className="itemPriceDesc">${item.price}</span>
       </p>
     </div>
     

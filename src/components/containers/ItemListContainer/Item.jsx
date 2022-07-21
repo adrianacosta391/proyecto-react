@@ -10,7 +10,7 @@ return (
         <Link to= {`/item/${item.id}`} className="itemCont">
             <h2 className="itemTitle">{item.title}</h2>
             <img src={item.pictureUrl} alt="" className="itemPicture" />
-            <h3 className="itemPrice">{item.price}</h3>
+            <h3 className="itemPrice">${item.price}</h3>
             <p className="itemDesc">{item.description}</p>
         </Link>
     

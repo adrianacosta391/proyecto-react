@@ -9,7 +9,8 @@ const CartContext = ({children}) => {
 
 const [products, setproducts] = useState([]);
 const [qtyProducts, setQtyProducts] = useState(0);
-console.log(products)
+
+
 
 
 
@@ -54,6 +55,10 @@ const isInCart = (id) =>{
     return products.some(products => products.id === id);
 
 }
+
+
+
+
 
  return (
     <Provider value={{products,qtyProducts,addProducts,removeProducts,clear,getQtyProducts}}>

@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 
-const ItemCount = ({ stock, initial = 0, onAdd,}) => {
+const ItemCount = ({ stock, initial = 1, onAdd,}) => {
   
   const [count, setCount] = useState(initial)
 
@@ -11,7 +11,7 @@ const ItemCount = ({ stock, initial = 0, onAdd,}) => {
   }
 
   const subtract = () => {
-    count > 0 && setCount(count - 1)
+    count > 1 && setCount(count - 1)
   }
 
   const purchase = () => {

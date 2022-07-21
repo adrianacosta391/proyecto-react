@@ -6,11 +6,12 @@ import { cartContext } from "../context/CartContext";
 const CartWidget = () => {
 
     const { qtyProducts } = useContext(cartContext);
+    const { products } = useContext(cartContext);
     
         return (
             <div className="cart-container">
                 <ShoppingCartIcon sx={{ fontSize: 30 }} />
-                <p className="text-cart">{qtyProducts}</p>
+                {products.length === 0 ? <p></p> : <p className="text-cart">{qtyProducts}</p> } 
             </div>
         )
        
