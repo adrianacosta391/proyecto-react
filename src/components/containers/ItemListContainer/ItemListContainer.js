@@ -1,15 +1,10 @@
 import React, { useEffect, useState } from "react"
 import Itemlist from "./ItemList"
-import Menu from "../../header/products.json"
 import DotLoader from "react-spinners/DotLoader"
 import { useParams } from "react-router-dom"
+import { db } from "../../../firebase/firebase";
+import { getDocs, collection, query, where } from "firebase/firestore"
 
-
-const promise = new Promise((res,rej) =>{
-setTimeout(() =>{
-    res(Menu);
-}, 2000);
-});
 
 
 
@@ -19,20 +14,33 @@ const ItemListContainer = ({greeting}) =>{
 
     const [products, setProducts] = useState([]);
     const [loading, setloading] = useState(true)
-
-    useEffect(() => {
-        promise.then((data) =>{
-        const getCategory = data.filter(x => x.category === categoryName)
-        categoryName ? setProducts(getCategory) : setProducts(data) 
-        setloading(false)
-        }).catch(() =>{
-            console.log('salio mal')
-        })
-    }, [categoryName]);
-
     
 
+       
 
+    useEffect(() => {
+        
+        const productCollection = collection(db,'productos');
+        const q = query(productCollection, where("category", "==", `${categoryName}`));
+        
+        
+      
+        
+        getDocs(categoryName ? q : productCollection)
+        .then(result => {
+          const list = result.docs.map(doc => {
+            return {
+                id: doc.id,
+                ...doc.data(),
+            }
+            })
+
+            setProducts(list);
+            setloading(false);
+            
+            })
+
+    }, [categoryName]);
 
     
 

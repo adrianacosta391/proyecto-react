@@ -1,17 +1,14 @@
 import React, { useEffect, useState } from "react"
-import Menu from "../../header/products.json"
 import DotLoader from "react-spinners/DotLoader"
 import ItemDetail from "../ItemDetailContainer/ItemDetail";
 import { useParams } from "react-router-dom"
+import {db} from "../../../firebase/firebase"
+import {getDoc, collection, doc} from "firebase/firestore"
 
 
 
 
-const promise = new Promise((res,rej) =>{
-    setTimeout(() =>{
-        res(Menu);
-    }, 2000);
-    });
+
 
 
 const ItemDetailContainer = ({greeting}) =>{
@@ -21,10 +18,16 @@ const ItemDetailContainer = ({greeting}) =>{
     const [loading, setloading] = useState(true)
 
     useEffect(() => {
-        promise.then((data) =>{
-        const getData = data.find(product => product.id === itemId)
-        setProducts(getData)
-        setloading(false)
+        const productCollection = collection(db,'productos');
+        const refDoc = doc(productCollection, itemId);
+        getDoc(refDoc)
+        .then(result => {
+            const producto = {
+                id: result.id,
+                ...result.data(),
+            }
+            setProducts(producto);
+            setloading(false)
         }).catch(() =>{
             console.log('todo mal')
         })
