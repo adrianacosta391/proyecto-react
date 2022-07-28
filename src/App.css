@@ -354,3 +354,23 @@ top:1px;
 .link{
   text-decoration: none;
 }
+
+.cartShowCheckout{
+  display: flex;
+  align-items: center;
+  justify-content:space-around;
+  flex-direction: column;
+  margin-top: 1vh;
+  padding: 1vh 15vh;
+  border: 1px solid rgb(255, 166, 0);;
+}
+
+.inputChekout{
+  margin: 2vh;
+  background-color: #282c34;
+  color: rgb(255, 166, 0);
+  height: 3vh;
+  text-align: center;
+  font-weight: bold;
+
+}

@@ -5,6 +5,7 @@ import ItemListContainer from './components/containers/ItemListContainer/ItemLis
 import Navbar from './components/header/NavBar'
 import Cart from './components/header/Cart';
 import CartContext from './components/context/CartContext';
+import Sales from "./components/sales/Sales";
 import {
   BrowserRouter,
   Routes,
@@ -21,6 +22,7 @@ const App = () => {
             <Route path="/category/:categoryName" element={<ItemListContainer greeting='Bienvenido a CB'/>} />
             <Route path="/item/:itemId" element={<ItemDetailContainer greeting='Detalles del producto'/>} />
             <Route path="/cart" element={<Cart key='cart'/>} />
+            <Route path="/checkout" element={<Sales key='sale'/>} />
           </Routes>
       </CartContext>
     </BrowserRouter>

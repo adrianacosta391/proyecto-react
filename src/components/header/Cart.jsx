@@ -1,7 +1,8 @@
-import React, { useContext} from "react";
+import React, { useContext } from "react";
 import { cartContext } from "../context/CartContext";
 import DeleteIcon from '@mui/icons-material/Delete';
 import {Link} from "react-router-dom"
+
 
 
 
@@ -23,8 +24,8 @@ const Cart = () =>{
             : <div> 
                     
             {products.map(p => 
-                <>
-                <div className="cartShowContainer" >
+                
+                <div key={p.id} className="cartShowContainer" >
                     <p className="cartShowText">Producto:</p>
                     <h2 className="cartShowTitle">{p.title}</h2>
                     <p className="cartShowText">Precio:</p>
@@ -33,15 +34,16 @@ const Cart = () =>{
                     <p className="cartShowQty">{p.qty}</p>
                     <button className="icon" onClick={() => removeProducts(p.id)} ><DeleteIcon  /></button>
                 </div>
-                </>
+                
             )}
                     <div className="cartShowContainer">
                     <h3 className="cartShowText">TOTAL: <span className="cartShowQty" >${total}</span></h3>
-                    <button className='btn'>Finalizar Compra</button>
+                    <Link className="link" to="/checkout"><button className='btn'>Finalizar Compra</button></Link>
                     <button className='btn' onClick={clear}>Limpiar Carrito</button>
                     </div>
 
             </div> }
+            
         </div>
     )
     
