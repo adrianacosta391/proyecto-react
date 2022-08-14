@@ -28,8 +28,8 @@ const ItemDetailContainer = ({greeting}) =>{
             }
             setProducts(producto);
             setloading(false)
-        }).catch(() =>{
-            console.log('todo mal')
+        }).catch((err) =>{
+            console.log(err)
         })
     }, [itemId]);
 

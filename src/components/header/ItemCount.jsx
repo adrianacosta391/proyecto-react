@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import Swal from 'sweetalert2'
 
 const ItemCount = ({ stock, initial = 1, onAdd,}) => {
   
@@ -6,7 +7,12 @@ const ItemCount = ({ stock, initial = 1, onAdd,}) => {
 
   const add = () => {
     count < stock && setCount(count + 1)
-    count >= stock && alert('No hay stock')
+    count >= stock && Swal.fire({
+      title: 'Error!',
+      text: 'No hay suficiente Stock',
+      icon: 'error',
+      confirmButtonText: 'ACEPTAR'
+    })
      
   }
 

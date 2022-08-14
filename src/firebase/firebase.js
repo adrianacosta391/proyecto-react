@@ -2,12 +2,12 @@ import { initializeApp } from "firebase/app";
 import { getFirestore} from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCTo5mwOFWMC2lGdrB8cSTkKiuT6vizoNo",
-  authDomain: "coderburger.firebaseapp.com",
-  projectId: "coderburger",
-  storageBucket: "coderburger.appspot.com",
-  messagingSenderId: "71952086286",
-  appId: "1:71952086286:web:b12ff64dea09a51499935f"
+  apiKey: "AIzaSyBTOin8ptBW1uw4EoObULJfq080DuPVoTU",
+  authDomain: "coderburger2022.firebaseapp.com",
+  projectId: "coderburger2022",
+  storageBucket: "coderburger2022.appspot.com",
+  messagingSenderId: "50370129834",
+  appId: "1:50370129834:web:b5db6db61aa10255c145d3"
 };
 
 // Initialize Firebase
